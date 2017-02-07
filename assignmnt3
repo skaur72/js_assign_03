@@ -1,0 +1,34 @@
+What is CLOSURE
+Closures are functions that refer to independent variables .independent variables are those that are used locally, but defined in an enclosing scope. 
+In other words, these functions remember the environment in which they were created.we can say,A function that referenced by some local variables is called a closure. 
+This behavior not only frees you from having to worry about lifetimes of variables but also allows for some creative use of function values.
+for example
+
+function f1() {
+var name="sandeep"
+  function displayName() {
+    return name;
+    }
+    return displayName;
+  
+  }
+  
+
+
+var myFunc = f1();
+myFunc();
+
+
+closure rules
+Closures have access to the outer function’s variable even after the outer function returns:
+One of the most important and features with closures is that the inner function still has access to the outer function’s variables even after the outer function has returned.
+This means that even after the outer function has returned, the inner function still has access to the outer function’s variables.
+Therefore, you can call the inner function later in the program.
+
+
+REFERENCES
+1 http://eloquentjavascript.net/03_functions.html
+2 http://www.w3schools.com/js/js_function_closures.asp
+3 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
+4 http://javascriptissexy.com/understand-javascript-closures-with-ease/
+5 https://www.youtube.com/watch?v=yiEeiMN2Khs
